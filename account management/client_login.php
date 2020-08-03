@@ -34,6 +34,7 @@ if(isset( $_GET["er"])){
         <br>
         <input type="submit" value="submit">
     </form>
+    <a href="client_createaccount.html">Sign UP</a>
 </body>
 
 </html>

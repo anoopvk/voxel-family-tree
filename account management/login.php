@@ -1,5 +1,7 @@
 <?php
 include 'config.php';
+// Start the session
+session_start();
 
 $uname_in = $_POST["username"];
 $pass_in = $_POST["password"];
@@ -19,6 +21,7 @@ if ($result) {
             // **************************************
             // echo (password_verify($pass,  $hashedpass));
             // ********************************
+            $_SESSION["u_name"]=$uname_in;
             header("Location: dashboard.html");
             echo "<br>correct password";
         } else {

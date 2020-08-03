@@ -21,10 +21,10 @@ if ($result) {
             $hashedpass= password_hash($new_pass, PASSWORD_BCRYPT );
             $hashedpass= mysqli_real_escape_string($conn,$hashedpass);
 
-            $sql = "UPDATE `userdata` SET 'password'='$hashedpass' WHERE 'username'='$uname_in'";
+            $sql = "UPDATE `userdata` SET `password`='$hashedpass' WHERE `username`='$uname_in'";
 
             if ($conn->query($sql) === TRUE) {
-                echo "New record created successfully";
+                header("Location: dashboard.html");
             } 
             else {
             echo "Error: " . $sql . "<br>" . $conn->error;
