@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createaccount</title>
+</head>
+
+<body>
+    <h1>create account</h1>
+    <form action="createaccount.php" method="post">
+        <br>
+       
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" />
+        <br>
+        <br>
+        <p>Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+        <br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+
+</html>
